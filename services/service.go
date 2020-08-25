@@ -81,6 +81,7 @@ func UpdatePost(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), 400)
 		return
 	}
+
 	resp.Message = "UPDATED"
 	json.NewEncoder(w).Encode(resp)
 }
